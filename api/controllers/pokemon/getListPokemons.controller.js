@@ -43,8 +43,8 @@ const getListPokemons = (req, res) => {
   const paginatedPokemonData = filteredPokemons.slice(startIndex, endIndex);
 
   res.status(200).json({
-    currentPage: pageNumber,
-    pokemonsPerPage: limitNumber,
+    page: pageNumber,
+    limit: limitNumber,
     totalResults: filteredPokemons.length,
     totalPages: Math.ceil(filteredPokemons.length / limitNumber),
     results: paginatedPokemonData,
