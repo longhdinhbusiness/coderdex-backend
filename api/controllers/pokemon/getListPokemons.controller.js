@@ -5,8 +5,8 @@ const getListPokemons = (req, res) => {
   const schema = Joi.object({
     type: Joi.string().optional(),
     name: Joi.string().optional(),
-    currentPage: Joi.number().integer().min(1).default(1),
-    pokemonsPerPage: Joi.number().integer().min(1).default(10),
+    page: Joi.number().integer().min(1).default(1),
+    limit: Joi.number().integer().min(1).default(10),
   });
 
   const { error, value } = schema.validate(req.query);
