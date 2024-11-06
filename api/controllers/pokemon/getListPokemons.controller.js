@@ -47,7 +47,7 @@ const getListPokemons = (req, res) => {
     limit: limitNumber,
     totalResults: filteredPokemons.length,
     totalPages: Math.ceil(filteredPokemons.length / limitNumber),
-    results: paginatedPokemonData,
+    data: paginatedPokemonData,
   });
 };
 
