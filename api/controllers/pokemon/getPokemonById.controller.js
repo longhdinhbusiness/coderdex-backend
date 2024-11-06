@@ -28,9 +28,11 @@ const getPokemonById = (req, res) => {
     pokemonData[id === pokemonData.length ? 0 : pokemonIndex + 1];
 
   const response = {
-    pokemon: currentPokemon,
-    previousPokemon: previousPokemon,
-    nextPokemon: nextPokemon,
+    data: {
+      pokemon: currentPokemon,
+      previousPokemon: previousPokemon,
+      nextPokemon: nextPokemon,
+    },
   };
   res.status(200).json(response);
 };
